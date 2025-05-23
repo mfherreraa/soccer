@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoccerRacer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>SoccerRacer ⚽</h1>
+
+    <div id="welcome">
+      <label for="playerName">Ingresa tu nombre:</label>
+      <input type="text" id="playerName" placeholder="Tu nombre" />
+      <button onclick="startGame()">Iniciar juego</button>
+    </div>
+
+    <div id="gameArea" style="display: none;">
+      <p id="greeting"></p>
+      <p>Puntaje: <span id="score">0</span></p>
+      <p>Pregunta <span id="currentQuestion">1</span> de 5</p>
+
+      <div id="questionBox">
+        <p id="questionText"></p>
+        <div id="answers"></div>
+      </div>
+
+      <img id="playerImage" src="" alt="Jugador" />
+
+      <div id="controls">
+        <button onclick="pauseMusic()">⏸ Pausar música</button>
+        <button onclick="playMusic()">▶️ Reanudar música</button>
+      </div>
+
+      <p id="resultMessage"></p>
+      <button id="restartBtn" onclick="location.reload()" style="display: none;">Reintentar</button>
+    </div>
+  </div>
+
+  <audio id="bgMusic" src="audio/Joy Crookes - Feet Dont Fail Me Now (Official Video).mp3" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
